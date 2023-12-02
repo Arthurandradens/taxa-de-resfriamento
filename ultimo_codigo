@@ -1,6 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+#Derivada de Newton:
+#T(t)=Ta +(T0−Ta)⋅e−kt
+
 #Constante de resfriamento
 k = 0.1
 #Temperatuda inicial do objeto
@@ -17,7 +20,7 @@ lista_temperatura[0] = T#Define que o primeiro valor da lista vai ser a temperat
 i = 1 #Valor de inicio do loop
 #Cálculo da derivada de newton que calcula a taxa de resfriamento de um objeto com base no tempo
 while i < t:
-  lista_temperatura[i] =Ta + (T - Ta) * np.exp(-k * i)
+  lista_temperatura[i] =Ta + (T - Ta) * np.exp(-k * i)#Converte o logaritmo para um número real
   i +=1
 
 print(lista_temperatura)
